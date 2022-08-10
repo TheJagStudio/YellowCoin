@@ -1,0 +1,722 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trader</title>
+        <script src={% static"tailwind.css" %}></script>
+        <style>
+            .example::-webkit-scrollbar {
+            display: none;
+            }
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            .example {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            }
+        </style>
+    </head>
+    <body class="example">
+        {% csrf_token %}
+        <div class="flex flex-nowrap flex-row overscroll-x-none">
+            <div class="w-60 h-full shadow-md bg-white fixed z-10"
+                id="sidenavSecExample">
+                <div class="pt-4 pb-2 px-6">
+                    <a href="./">
+                        <div class="flex items-center">
+                            <div class="shrink-0">
+                                <img src={% static"logo.png" %}
+                                    class="rounded-full w-10" alt="Avatar">
+                            </div>
+                            <div class="grow ml-3">
+                                <p class="text-2xl font-semibold text-blue-600
+                                    font-bold">Gold Mine</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <ul class="relative px-1">
+                    <li class="relative" id="sidenavSecEx1">
+                        <a onclick="hide(1)" class="flex items-center text-sm
+                            py-4 px-6 h-12 overflow-hidden text-gray-700
+                            text-ellipsis whitespace-nowrap rounded
+                            hover:text-blue-600 hover:bg-blue-50 transition
+                            duration-300 ease-in-out cursor-pointer
+                            ripple-surface-primary">
+                            <svg aria-hidden="true" focusable="false"
+                                data-prefix="fas" class="w-3 h-3 mr-3"
+                                role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 496 512">
+                                <path fill="currentColor" d="M336.5 160C322 70.7
+                                    287.8 8 248 8s-74 62.7-88.5 152h177zM152
+                                    256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5
+                                    3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1
+                                    20.5-3.3 41.8-3.3
+                                    64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6
+                                    24.4 33.8 41.2 84.7 50 141.6h108zM177.2
+                                    18.4C105.8 39.6 47.8 92.1 19.3
+                                    160h108c8.7-56.9 25.5-107.8
+                                    49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5
+                                    3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5
+                                    8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120
+                                    256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0
+                                    233.8 0 256s3.2 43.5 8.6
+                                    64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5
+                                    89.3 48.7 152 88.5 152s74-62.7
+                                    88.5-152h-177zm159.3 141.6c71.4-21.2
+                                    129.4-73.7 158-141.6h-108c-8.8 56.9-25.6
+                                    107.8-50 141.6zM19.3 352c28.6 67.9 86.5
+                                    120.4 158
+                                    141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path>
+                            </svg>
+                            <span>Trading</span>
+                            <svg aria-hidden="true" focusable="false"
+                                data-prefix="fas" class="w-3 h-3 ml-auto"
+                                role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M207.029
+                                    381.476L12.686
+                                    187.132c-9.373-9.373-9.373-24.569
+                                    0-33.941l22.667-22.667c9.357-9.357
+                                    24.522-9.375 33.901-.04L224
+                                    284.505l154.745-154.021c9.379-9.335
+                                    24.544-9.317 33.901.04l22.667 22.667c9.373
+                                    9.373 9.373 24.569 0 33.941L240.971
+                                    381.476c-9.373 9.372-24.569 9.372-33.942
+                                    0z"></path>
+                            </svg>
+                        </a>
+                        <ul class="relative accordion-collapse collapse"id="collapseSidenavSecEx1">
+                            <li class="relative bg-blue-50">
+                                <a href="../watchlist" class="flex items-center
+                                    text-xs py-4 pl-12 pr-6 h-6 overflow-hidden
+                                    text-gray-700 text-ellipsis
+                                    whitespace-nowrap rounded
+                                    hover:text-blue-600 hover:bg-blue-50
+                                    transition duration-300 ease-in-out"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="primary">Watchlist</a>
+                            </li>
+                            <li class="relative">
+                                <a href="../trades" class="flex items-center
+                                    text-xs py-4 pl-12 pr-6 h-6 overflow-hidden
+                                    text-gray-700 text-ellipsis
+                                    whitespace-nowrap rounded
+                                    hover:text-blue-600 hover:bg-blue-50
+                                    transition duration-300 ease-in-out"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="primary">Trades</a>
+                            </li>
+                            <li class="relative">
+                                <a href="#!" class="flex items-center text-xs
+                                    py-4 pl-12 pr-6 h-6 overflow-hidden
+                                    text-gray-700 text-ellipsis
+                                    whitespace-nowrap rounded
+                                    hover:text-blue-600 hover:bg-blue-50
+                                    transition duration-300 ease-in-out"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="primary">Portfolio/Position</a>
+                            </li>
+                            <li class="relative">
+                                <a href="#!" class="flex items-center text-xs
+                                    py-4 pl-12 pr-6 h-6 overflow-hidden
+                                    text-gray-700 text-ellipsis
+                                    whitespace-nowrap rounded
+                                    hover:text-blue-600 hover:bg-blue-50
+                                    transition duration-300 ease-in-out"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="primary">Banned/Blocked
+                                    Script</a>
+                            </li>
+                            <li class="relative">
+                                <a href="#!" class="flex items-center text-xs
+                                    py-4 pl-12 pr-6 h-6 overflow-hidden
+                                    text-gray-700 text-ellipsis
+                                    whitespace-nowrap rounded
+                                    hover:text-blue-600 hover:bg-blue-50
+                                    transition duration-300 ease-in-out"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="primary">Max Quantity
+                                    Details</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="relative" id="sidenavSecEx2">
+                        <a onclick="hide(2)" class="flex items-center text-sm
+                            py-4 px-6 h-12 overflow-hidden text-gray-700
+                            text-ellipsis whitespace-nowrap rounded
+                            hover:text-blue-600 hover:bg-blue-50 transition
+                            duration-300 ease-in-out cursor-pointer
+                            ripple-surface-primary" data-mdb-ripple="true"
+                            data-mdb-ripple-color="primary"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSidenavSecEx2"
+                            aria-expanded="false"
+                            aria-controls="collapseSidenavSecEx2">
+                            <svg aria-hidden="true" focusable="false"
+                                data-prefix="fas" class="w-4 mr-2" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0
+                                16 16">
+                                <path fill="currentColor" d="M4 10.781c.148
+                                    1.667 1.513 2.85 3.591
+                                    3.003V15h1.043v-1.216c2.27-.179 3.678-1.438
+                                    3.678-3.3
+                                    0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11
+                                    1.879.714 2.07
+                                    1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27
+                                    1.472-3.27 3.156 0 1.454.966 2.483 2.661
+                                    2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616
+                                    0-.944.704-1.641
+                                    1.8-1.828v3.495l-.2-.05zm1.591
+                                    1.872c1.287.323 1.852.859 1.852 1.769 0
+                                    1.097-.826 1.828-2.2 1.939V8.73l.348.086z"
+                                    />
+                                </svg>
+                                <span>Forex/Comex</span>
+                                <svg aria-hidden="true" focusable="false"
+                                    data-prefix="fas" class="w-3 h-3 ml-auto"
+                                    role="img"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path fill="currentColor" d="M207.029
+                                        381.476L12.686
+                                        187.132c-9.373-9.373-9.373-24.569
+                                        0-33.941l22.667-22.667c9.357-9.357
+                                        24.522-9.375 33.901-.04L224
+                                        284.505l154.745-154.021c9.379-9.335
+                                        24.544-9.317 33.901.04l22.667
+                                        22.667c9.373 9.373 9.373 24.569 0
+                                        33.941L240.971 381.476c-9.373
+                                        9.372-24.569 9.372-33.942 0z"></path>
+                                </svg>
+                            </a>
+                            <ul class="relative accordion-collapse collapse
+                                hidden" id="collapseSidenavSecEx2">
+                                <li class="relative">
+                                    <a href="#!" class="flex items-center
+                                        text-xs py-4 pl-12 pr-6 h-6
+                                        overflow-hidden text-gray-700
+                                        text-ellipsis whitespace-nowrap rounded
+                                        hover:text-blue-600 hover:bg-blue-50
+                                        transition duration-300 ease-in-out"
+                                        data-mdb-ripple="true"
+                                        data-mdb-ripple-color="primary">Watchlist</a>
+                                </li>
+                                <li class="relative">
+                                    <a href="#!" class="flex items-center
+                                        text-xs py-4 pl-12 pr-6 h-6
+                                        overflow-hidden text-gray-700
+                                        text-ellipsis whitespace-nowrap rounded
+                                        hover:text-blue-600 hover:bg-blue-50
+                                        transition duration-300 ease-in-out"
+                                        data-mdb-ripple="true"
+                                        data-mdb-ripple-color="primary">Trades</a>
+                                </li>
+                                <li class="relative">
+                                    <a href="#!" class="flex items-center
+                                        text-xs py-4 pl-12 pr-6 h-6
+                                        overflow-hidden text-gray-700
+                                        text-ellipsis whitespace-nowrap rounded
+                                        hover:text-blue-600 hover:bg-blue-50
+                                        transition duration-300 ease-in-out"
+                                        data-mdb-ripple="true"
+                                        data-mdb-ripple-color="primary">Portfolio/Position</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative" id="sidenavSecEx3">
+                            <a onclick="hide(3)" class="flex items-center
+                                text-sm py-4 px-6 h-12 overflow-hidden
+                                text-gray-700 text-ellipsis whitespace-nowrap
+                                rounded hover:text-blue-600 hover:bg-blue-50
+                                transition duration-300 ease-in-out
+                                cursor-pointer ripple-surface-primary"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="primary"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSidenavSecEx2"
+                                aria-expanded="false"
+                                aria-controls="collapseSidenavSecEx2">
+                                <svg aria-hidden="true" focusable="false"
+                                    data-prefix="fas" class="w-4 mr-2"
+                                    role="img"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16">
+                                    <path fill="currentColor" d="M4 10.781c.148
+                                        1.667 1.513 2.85 3.591
+                                        3.003V15h1.043v-1.216c2.27-.179
+                                        3.678-1.438 3.678-3.3
+                                        0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11
+                                        1.879.714 2.07
+                                        1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27
+                                        1.472-3.27 3.156 0 1.454.966 2.483 2.661
+                                        2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616
+                                        0-.944.704-1.641
+                                        1.8-1.828v3.495l-.2-.05zm1.591
+                                        1.872c1.287.323 1.852.859 1.852 1.769 0
+                                        1.097-.826 1.828-2.2
+                                        1.939V8.73l.348.086z" />
+                                    </svg>
+                                    <span>Crypto</span>
+                                    <svg aria-hidden="true" focusable="false"
+                                        data-prefix="fas" class="w-3 h-3
+                                        ml-auto" role="img"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512">
+                                        <path fill="currentColor" d="M207.029
+                                            381.476L12.686
+                                            187.132c-9.373-9.373-9.373-24.569
+                                            0-33.941l22.667-22.667c9.357-9.357
+                                            24.522-9.375 33.901-.04L224
+                                            284.505l154.745-154.021c9.379-9.335
+                                            24.544-9.317 33.901.04l22.667
+                                            22.667c9.373 9.373 9.373 24.569 0
+                                            33.941L240.971 381.476c-9.373
+                                            9.372-24.569 9.372-33.942 0z"></path>
+                                    </svg>
+                                </a>
+                                <ul class="relative accordion-collapse collapse
+                                    hidden" id="collapseSidenavSecEx3">
+                                    <li class="relative">
+                                        <a href="#!" class="flex items-center
+                                            text-xs py-4 pl-12 pr-6 h-6
+                                            overflow-hidden text-gray-700
+                                            text-ellipsis whitespace-nowrap
+                                            rounded hover:text-blue-600
+                                            hover:bg-blue-50 transition
+                                            duration-300 ease-in-out"
+                                            data-mdb-ripple="true"
+                                            data-mdb-ripple-color="primary">Watchlist</a>
+                                    </li>
+                                    <li class="relative">
+                                        <a href="#!" class="flex items-center
+                                            text-xs py-4 pl-12 pr-6 h-6
+                                            overflow-hidden text-gray-700
+                                            text-ellipsis whitespace-nowrap
+                                            rounded hover:text-blue-600
+                                            hover:bg-blue-50 transition
+                                            duration-300 ease-in-out"
+                                            data-mdb-ripple="true"
+                                            data-mdb-ripple-color="primary">Trades</a>
+                                    </li>
+                                    <li class="relative">
+                                        <a href="#!" class="flex items-center
+                                            text-xs py-4 pl-12 pr-6 h-6
+                                            overflow-hidden text-gray-700
+                                            text-ellipsis whitespace-nowrap
+                                            rounded hover:text-blue-600
+                                            hover:bg-blue-50 transition
+                                            duration-300 ease-in-out"
+                                            data-mdb-ripple="true"
+                                            data-mdb-ripple-color="primary">Portfolio/Position</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="text-center bottom-0 absolute w-full">
+                            <hr class="m-0">
+                            <p class="py-2 text-sm text-gray-700">Welcome {{
+                                current_user.username }}</p>
+                        </div>
+                    </div>
+                    <div class="ml-60 absolute inset-0 w-auto">
+                        <div class="h-20 flex flex-nowrap bg-gray-100">
+                            <div class="flex justify-left">
+                                <div class="dropdown relative m-auto
+                                    mx-[100px]">
+                                    <button class="dropdown-toggle px-6 py-2.5
+                                        bg-blue-600 text-white font-medium
+                                        text-xs leading-tight uppercase rounded
+                                        shadow-md hover:bg-blue-700
+                                        hover:shadow-lg focus:bg-blue-700
+                                        focus:shadow-lg focus:outline-none
+                                        focus:ring-0 active:bg-blue-800
+                                        active:shadow-lg active:text-white
+                                        transition duration-150 ease-in-out flex
+                                        items-center whitespace-nowrap"type="button"
+                                        id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Stocks Companies
+                                        <svg aria-hidden="true"
+                                            focusable="false" data-prefix="fas"
+                                            data-icon="caret-down" class="w-2
+                                            ml-2" role="img"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 320 512">
+                                            <path fill="currentColor" d="M31.3
+                                                192h257.3c17.8 0 26.7 21.5 14.1
+                                                34.1L174.1 354.8c-7.8 7.8-20.5
+                                                7.8-28.3 0L17.2 226.1C4.6 213.5
+                                                13.5 192 31.3 192z"></path>
+                                        </svg>
+                                    </button>
+                                    <ul id="dropdown" class="dropdown-menu
+                                        min-w-max absolute hidden bg-white
+                                        text-base z-50 float-left py-2 list-none
+                                        text-centre rounded-lg shadow-lg mt-1
+                                        hidden m-0 bg-clip-padding border-none
+                                        w-[100px]"
+                                        aria-labelledby="dropdownMenuButton1">
+                                        {% for stock in stocksA %}
+                                        <li onclick="selector('{{stock}}')">
+                                            <a class="dropdown-item text-sm py-2
+                                                px-4 font-normal block w-full
+                                                whitespace-nowrap bg-transparent
+                                                text-gray-700 hover:bg-gray-100"href="#">{{stock}}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex justify-center m-auto mt-5">
+                                <div class="mb-3 w-auto">
+                                    <div class="input-group relative flex
+                                        flex-nowrap items-stretch w-full mb-4">
+                                        <input type="search" onkeyup="filter()"
+                                            id="search" class="form-control
+                                            relative flex-auto w-[250px] block
+                                            w-full px-3 py-1.5 text-base
+                                            font-normal text-gray-700 bg-white
+                                            bg-clip-padding border border-solid
+                                            border-gray-300 rounded-l-lg
+                                            transition ease-in-out m-0
+                                            focus:text-gray-700 focus:bg-white
+                                            focus:border-blue-600
+                                            focus:outline-none"
+                                            placeholder="Search"
+                                            aria-label="Search"
+                                            aria-describedby="button-addon2">
+                                        <button class="btn inline-block px-6
+                                            py-2.5 bg-blue-600 text-white
+                                            font-medium text-xs leading-tight
+                                            uppercase rounded-r-lg shadow-md
+                                            hover:bg-blue-700 hover:shadow-lg
+                                            focus:bg-blue-700 focus:shadow-lg
+                                            focus:outline-none focus:ring-0
+                                            active:bg-blue-800 active:shadow-lg
+                                            transition duration-150 ease-in-out
+                                            flex items-center" type="button"
+                                            id="button-addon2">
+                                            <svg aria-hidden="true"
+                                                focusable="false"
+                                                data-prefix="fas"
+                                                data-icon="search" class="w-4"
+                                                role="img"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M505 442.7L405.3
+                                                    343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3
+                                                    44-79.7 44-128C416 93.1
+                                                    322.9 0 208 0S0 93.1 0
+                                                    208s93.1 208 208 208c48.3 0
+                                                    92.7-16.4 128-44v16.3c0 6.4
+                                                    2.5 12.5 7 17l99.7 99.7c9.4
+                                                    9.4 24.6 9.4 33.9
+                                                    0l28.3-28.3c9.4-9.4
+                                                    9.4-24.6.1-34zM208 336c-70.7
+                                                    0-128-57.2-128-128 0-70.7
+                                                    57.2-128 128-128 70.7 0 128
+                                                    57.2 128 128 0 70.7-57.2
+                                                    128-128 128z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2 justify-center m-auto
+                                ml-5">
+                                <button type="button" onclick="add()"
+                                    class="inline-block rounded-full bg-blue-600
+                                    text-white leading-normal uppercase
+                                    shadow-md hover:bg-blue-700 hover:shadow-lg
+                                    focus:bg-blue-700 focus:shadow-lg
+                                    focus:outline-none focus:ring-0
+                                    active:bg-blue-800 active:shadow-lg
+                                    transition duration-150 ease-in-out w-9
+                                    h-9">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16"
+                                        fill="currentColor" class="w-3 mx-auto"
+                                        viewBox="1 1 13 14">
+                                        <path fill-rule="evenodd" d="M8 2a.5.5 0
+                                            0 1 .5.5v5h5a.5.5 0 0 1 0
+                                            1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0
+                                            1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="flex space-x-2 justify-center m-auto
+                                    ml-5">
+                                    <button type="button" onclick="location.href=
+                                        '../../accounts/logout';"
+                                        class="inline-block px-6 py-2.5
+                                        bg-blue-600 text-white font-medium
+                                        text-xs leading-tight uppercase rounded
+                                        shadow-md hover:bg-blue-700
+                                        hover:shadow-lg focus:bg-blue-700
+                                        focus:shadow-lg focus:outline-none
+                                        focus:ring-0 active:bg-blue-800
+                                        active:shadow-lg transition duration-150
+                                        ease-in-out">Logout</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <marquee class="ml-0 text-gray-400">Use
+                                apiKey=asdfghjkl and symbol= example :
+                                /data?apiKey=asdfghjkl&symbol=TCS:NSE ( symbol
+                                is optional )</marquee>
+                            <hr>
+                            <div class="ml-[5vw] h-50 flex flex-col">
+                                <div class="">
+                                    <div class="py-2 inline-block w-auto sm:px-6
+                                        lg:px-8">
+                                        <div class="m-auto">
+                                            <table class="overflow-visible">
+                                                <thead class="border-b">
+                                                    <tr>
+                                                        <th scope="col"
+                                                            class="text-sm
+                                                            font-medium
+                                                            text-gray-900 px-6
+                                                            py-4 text-left">
+                                                            NSEFUT SYM
+                                                        </th>
+                                                        <th scope="col"
+                                                            class="text-sm
+                                                            font-medium
+                                                            text-gray-900 px-6
+                                                            py-4 text-left">
+                                                            PRICE
+                                                        </th>
+                                                        <th scope="col"
+                                                            class="text-sm
+                                                            font-medium
+                                                            text-gray-900 px-6
+                                                            py-4 text-left">
+                                                            PREVIOUS CLOSE
+                                                        </th>
+                                                        <th scope="col"
+                                                            class="text-sm
+                                                            font-medium
+                                                            text-gray-900 px-6
+                                                            py-4 text-left">
+                                                            Day Range
+                                                        </th>
+                                                        <th scope="col"
+                                                            class="text-sm
+                                                            font-medium
+                                                            text-gray-900 px-6
+                                                            py-4 text-left">
+                                                            Year Range
+                                                        </th>
+                                                        <th scope="col"
+                                                            class="text-sm
+                                                            font-medium
+                                                            text-gray-900 px-6
+                                                            py-4 text-left">
+                                                            VOLUME
+                                                        </th>
+                                                        <th scope="col"
+                                                            class="text-sm
+                                                            font-medium
+                                                            text-gray-900 px-6
+                                                            py-4 text-left">
+                                                            DIVIDEND YIELD
+                                                        </th>
+                                                        <th scope="col"
+                                                            class="text-sm
+                                                            font-medium
+                                                            text-gray-900 px-6
+                                                            py-4 text-left">
+                                                            REMOVE
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="table">
+                                                    {% for stock in dataArrFinal
+                                                    %}
+                                                    <tr class="border-b">
+                                                        <td id="title"
+                                                            class="px-6 py-4
+                                                            whitespace-nowrap
+                                                            text-sm font-medium
+                                                            text-gray-900">{{stock.0}}</td>
+                                                        <td class="text-sm
+                                                            text-gray-900
+                                                            font-light px-6 py-4
+                                                            whitespace-nowrap">{{stock.1}}</td>
+                                                        <td class="text-sm
+                                                            text-gray-900
+                                                            font-light px-6 py-4
+                                                            whitespace-nowrap">{{stock.2}}</td>
+                                                        <td class="text-sm
+                                                            text-gray-900
+                                                            font-light px-6 py-4
+                                                            whitespace-nowrap">{{stock.3}}</td>
+                                                        <td class="text-sm
+                                                            text-gray-900
+                                                            font-light px-6 py-4
+                                                            whitespace-nowrap">{{stock.4}}</td>
+                                                        <td class="text-sm
+                                                            text-gray-900
+                                                            font-light px-6 py-4
+                                                            whitespace-nowrap">{{stock.5}}</td>
+                                                        <td class="text-sm
+                                                            text-gray-900
+                                                            font-light px-6 py-4
+                                                            whitespace-nowrap">{{stock.7}}</td>
+                                                        <td class="text-sm
+                                                            text-gray-900
+                                                            font-light px-6 py-4
+                                                            whitespace-nowrap">
+                                                            <button
+                                                                onclick="deleteR(this)"
+                                                                type="button"
+                                                                class="inline-block
+                                                                rounded-full
+                                                                bg-red-600
+                                                                text-white
+                                                                leading-normal
+                                                                uppercase
+                                                                shadow-md
+                                                                hover:bg-blue-700
+                                                                hover:shadow-lg
+                                                                focus:bg-blue-700
+                                                                focus:shadow-lg
+                                                                focus:outline-none
+                                                                focus:ring-0
+                                                                active:bg-blue-800
+                                                                active:shadow-lg
+                                                                transition
+                                                                duration-150
+                                                                ease-in-out w-9
+                                                                h-9">
+                                                                X
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+            const dropdown = document.getElementById('dropdown');
+            const dropdownButton = document.getElementById('dropdownMenuButton1');
+            dropdownButton.addEventListener('click', () => {
+                dropdown.classList.toggle('hidden');
+            });
+            function selector(symbol)
+            {
+                dropdownButton.innerHTML = symbol + '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>';
+                dropdown.classList.toggle('hidden');
+            }
+            function add()
+            {
+                let symbol = dropdownButton.innerText;
+                dropdownButton.innerHTML = 'Stocks Companies'+ '<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="w-2 ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>';
+                let fetchRes = fetch("../data?apiKey=qwertyuiop&todo=get&symbol=" + symbol);
+                fetchRes.then(res =>
+                    res.json()).then(d => {
+                        console.log(d)
+                        let table = document.getElementById('table');
+                        table.innerHTML+=`<tr class="border-b">
+                        <td id="title" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">`+d['data'][0]['name']+`</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">`+d['data'][0]['price']+`</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">`+d['data'][0]['priviousClose']+`</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">`+d['data'][0]['dayRange']+`</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">`+d['data'][0]['yearRange']+`</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">`+d['data'][0]['volume']+`</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">`+d['data'][0]['dividentYield']+`</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <button type="button" onclick="deleteR(this)" class="inline-block rounded-full bg-red-600 text-white leading-normal uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-9 h-9">
+                                X
+                            </button>
+                        </td>
+                        </tr>`
+                    })
+            }
+            function deleteR(element)
+            {
+                console.log("working");
+                let table = document.getElementById('table');
+                fetch("../data?apiKey=qwertyuiop&todo=delete&symbol="+ table.rows[element.parentNode.parentNode.rowIndex-1].cells[0].innerHTML, 
+                    res =>
+                    res.json()
+                ).then((_res) => {
+                    console.log();
+                });
+                console.log(table.rows[element.parentNode.parentNode.rowIndex-1].cells[0].innerHTML);
+                table.deleteRow(element.parentNode.parentNode.rowIndex-1);
+            }
+
+            function filter() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("search");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("table");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    console.log(td);
+                    if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                    }       
+                }
+            }
+        </script>
+                    <script>
+            function hide(i)
+            {
+                if (i==1)
+                {
+                    if (document.getElementById('collapseSidenavSecEx1').classList.contains('hidden'))
+                    {
+                        document.getElementById('collapseSidenavSecEx1').classList.remove('hidden');
+                    }
+                    else
+                    {
+                        document.getElementById('collapseSidenavSecEx1').classList.add('hidden');
+                    }
+                }
+                else if (i==2)
+                {
+                    if (document.getElementById('collapseSidenavSecEx2').classList.contains('hidden'))
+                    {
+                        document.getElementById('collapseSidenavSecEx2').classList.remove('hidden');
+                    }
+                    else
+                    {
+                        document.getElementById('collapseSidenavSecEx2').classList.add('hidden');
+                    }
+                }
+                else if (i==3)
+                {
+                    if (document.getElementById('collapseSidenavSecEx3').classList.contains('hidden'))
+                    {
+                        document.getElementById('collapseSidenavSecEx3').classList.remove('hidden');
+                    }
+                    else
+                    {
+                        document.getElementById('collapseSidenavSecEx3').classList.add('hidden');
+                    }
+                }
+                
+            }
+        </script>
+                    <script
+                        src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+                        integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="crossorigin="anonymous"></script>
+                </body>
+            </html>
