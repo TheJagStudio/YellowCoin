@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSockets</title>
+    </head>
+    <body>
+        <h5 id="app"></h5>
+        <script>
+            var socket = new WebSocket('ws://'+window.location.host+'/ws/stock/trade/');
+            socket.onmessage = function(event) {
+                if (JSON.parse(event.data)["message"] == "connected") {
+                    socket.send(JSON.stringify({
+                        'message': 'new'
+                    }));
+                    sender();
+                }
+                else {
+                    console.log(JSON.parse(event.data)["message"]);
+                    document.getElementById("app").innerHTML = JSON.parse(event.data)["message"];
+                }
+            };
+            function sender() {
+                socket.send(JSON.stringify({
+                    'message': 'update'
+                }));
+                setTimeout(sender, 500);
+            }
+        </script>
+    </body>
+</html>

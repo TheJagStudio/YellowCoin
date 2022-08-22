@@ -1,0 +1,1462 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-12">
+      <div class="react-reveal container" style="animation-fill-mode: both;
+            animation-duration: 1000ms; animation-delay: 0ms;
+            animation-iteration-count: 1; opacity: 1; animation-name:
+            react-reveal-345736357627564-1;">
+            <div class="row">
+                  <div class="col-3 col-sm-3 col-md-6 col-lg-2 col-xl-2">
+                        Valan
+                  </div>
+                  <div class="col-9 col-sm-9 col-md-6 col-lg-7 col-xl-7
+                        text-start">
+                        <div class="container">
+                              <div class="row">
+                                    <div class="col-6">
+                                          <div class="form-check">
+                                                <input class="form-check-input
+                                                      focus-none"
+                                                      id="flexRadioDefault1"
+                                                      name="flexRadioDefault"
+                                                      type="radio" />
+                                                <label class="form-check-label"
+                                                      for="flexRadioDefault1">
+                                                      Open
+                                                </label>
+                                          </div>
+                                    </div>
+                                    <div class="col-6">
+                                          <div class="form-check">
+                                                <input class="form-check-input
+                                                      focus-none"
+                                                      id="flexRadioDefault1"
+                                                      name="flexRadioDefault"
+                                                      type="radio" />
+                                                <label class="form-check-label"
+                                                      for="flexRadioDefault1">
+                                                      Close
+                                                </label>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="react-reveal container my-5" style="animation-fill-mode: both;
+            animation-duration: 1000ms; animation-delay: 0ms;
+            animation-iteration-count: 1; opacity: 1; animation-name:
+            react-reveal-345736357627564-1;">
+            <div class="row">
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-2">
+                        <p>
+                              Market Type
+                        </p>
+                        <select aria-label="Default select example"
+                              class="form-select bg-orange color-white
+                              height-button focus-none">
+                              <option class="bg-light text-dark ps-3" value="1">
+                                    Select Market
+                              </option>
+                              <option class="bg-light text-dark ps-3" value="2">
+                                    One
+                              </option>
+                              <option class="bg-light text-dark ps-3" value="3">
+                                    Two
+                              </option>
+                              <option class="bg-light text-dark ps-3" value="3">
+                                    Three
+                              </option>
+                        </select>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-2">
+                        <p>
+                              Valan Name
+                        </p>
+                        <select aria-label="Default select example"
+                              class="form-select bg-orange color-white
+                              height-button focus-none">
+                              <option class="bg-light text-dark ps-3" value="1">
+                                    Valan Name
+                              </option>
+                              <option class="bg-light text-dark ps-3" value="2">
+                                    One
+                              </option>
+                              <option class="bg-light text-dark ps-3" value="3">
+                                    Two
+                              </option>
+                              <option class="bg-light text-dark ps-3" value="3">
+                                    Three
+                              </option>
+                        </select>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-2">
+                        <p class="m-2">
+                              From End
+                        </p>
+                        <input class="bg-orange date-input color-white w-100
+                              height-button border-none px-3 fs-6 cursor"
+                              type="date" />
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 my-2">
+                        <p class="m-2">
+                              From End
+                        </p>
+                        <input class="bg-orange date-input color-white w-100
+                              height-button border-none px-3 fs-6 cursor"
+                              type="date" />
+                  </div>
+            </div>
+      </div>
+      <div class="react-reveal container my-5" style="animation-fill-mode: both;
+            animation-duration: 1000ms; animation-delay: 0ms;
+            animation-iteration-count: 1; opacity: 1; animation-name:
+            react-reveal-345736357627564-1;">
+            <div class="row">
+                  <div class="col-12">
+                        <button class="float-end btn btn-lg mx-5 bg-danger
+                              focus-none text-light" type="button">
+                              +ADD
+                        </button>
+                  </div>
+            </div>
+      </div>
+      <div class="react-reveal" style="animation-fill-mode: both;
+            animation-duration: 1000ms; animation-delay: 0ms;
+            animation-iteration-count: 1; opacity: 1; animation-name:
+            react-reveal-345736357627564-1;">
+            <div class="table-responsive ms-3">
+                  <table class="table my-5 table-borderless">
+                        <thead>
+                              <tr class="table-border-none">
+                                    <th class="bg-dark text-white" scope="col">
+                                          NSEFUT SYM
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          BIO RATE
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          ASK RATE
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          LTP
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          CHANGE%
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          NET CHANGE
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          HIGH
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          LOW
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          OPEN
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          CLOSE
+                                    </th>
+                                    <th class="bg-dark text-white" scope="col">
+                                          REMOVE
+                                    </th>
+                              </tr>
+                        </thead>
+                        <tbody>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec c color-white"
+                                                href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                148.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-danger
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                148.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-danger
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-down" color="red"
+                                                      data-icon="caret-down"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6
+                                                            246.6l-127.1
+                                                            128C176.4 380.9
+                                                            168.2 384 160
+                                                            384s-16.38-3.125-22.63-9.375l-127.1-128C.2244
+                                                            237.5-2.516 223.7
+                                                            2.438 211.8S19.07
+                                                            192 32
+                                                            192h255.1c12.94 0
+                                                            24.62 7.781 29.58
+                                                            19.75S319.8 237.5
+                                                            310.6 246.6z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                1 48.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-danger
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                1 48.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-danger
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                1 48.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-down" color="red"
+                                                      data-icon="caret-down"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6
+                                                            246.6l-127.1
+                                                            128C176.4 380.9
+                                                            168.2 384 160
+                                                            384s-16.38-3.125-22.63-9.375l-127.1-128C.2244
+                                                            237.5-2.516 223.7
+                                                            2.438 211.8S19.07
+                                                            192 32
+                                                            192h255.1c12.94 0
+                                                            24.62 7.781 29.58
+                                                            19.75S319.8 237.5
+                                                            310.6 246.6z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                148.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                148.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                148.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                148.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                148.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                              <tr class="">
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                NIFTY 31MAR2022
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0 bg-primary
+                                          text-center">
+                                          <a class="no-dec color-white" href="">
+                                                17,518.00
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                0.96
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-caret-up" color="green"
+                                                      data-icon="caret-up"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M9.39
+                                                            265.4l127.1-128C143.6
+                                                            131.1 151.8 128 160
+                                                            128s16.38 3.125
+                                                            22.63 9.375l127.1
+                                                            128c9.156 9.156 11.9
+                                                            22.91 6.943
+                                                            34.88S300.9 320
+                                                            287.1
+                                                            320H32.01c-12.94
+                                                            0-24.62-7.781-29.58-19.75S.2333
+                                                            274.5 9.39 265.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                                148.95
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,533.50
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,436.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,501.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <a class="no-dec text-dark" href="">
+                                                17,368.05
+                                          </a>
+                                    </td>
+                                    <td class="td-border py-0">
+                                          <button class="btn mx-3 my-0 py-0
+                                                the-button" type="button">
+                                                <svg aria-hidden="true"
+                                                      class="svg-inline--fa
+                                                      fa-xmark fa-1x cross-size"
+                                                      color="red"
+                                                      data-icon="xmark"
+                                                      data-prefix="fas"
+                                                      focusable="false"
+                                                      role="img" viewbox="0 0
+                                                      320 512"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path d="M310.6 361.4c12.5
+                                                            12.5 12.5 32.75 0
+                                                            45.25C304.4 412.9
+                                                            296.2 416 288
+                                                            416s-16.38-3.125-22.62-9.375L160
+                                                            301.3L54.63
+                                                            406.6C48.38 412.9
+                                                            40.19 416 32
+                                                            416S15.63 412.9
+                                                            9.375
+                                                            406.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25l105.4-105.4L9.375
+                                                            150.6c-12.5-12.5-12.5-32.75
+                                                            0-45.25s32.75-12.5
+                                                            45.25 0L160
+                                                            210.8l105.4-105.4c12.5-12.5
+                                                            32.75-12.5 45.25
+                                                            0s12.5 32.75 0
+                                                            45.25l-105.4
+                                                            105.4L310.6 361.4z"
+                                                            fill="currentColor">
+                                                      </path>
+                                                </svg>
+                                          </button>
+                                    </td>
+                              </tr>
+                        </tbody>
+                  </table>
+            </div>
+      </div>
+</div>
+{% endblock %}
