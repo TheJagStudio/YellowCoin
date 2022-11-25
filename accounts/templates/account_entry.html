@@ -215,7 +215,7 @@
         animation-iteration-count: 1; opacity: 1; animation-name:
         react-reveal-962533893451499-1; transform: translateY(-50px);">
         <div class="">
-            <table style="height: 21px !important; background-color: #686868
+            <table  style="text-align: center;height: 21px !important; background-color: #686868
                 !important;width: 98vw;">
                 <thead>
                     <tr class="table-border-none">
@@ -249,16 +249,16 @@
                 </thead>
                 <tbody>
                     {% for entry in entries %}
-                    <tr class="table-border-none">
-                        <th class="text-black bg-white" scope="col">{{entry.id}}</th>
-                        <th class="text-black bg-white" scope="col">{{entry.accountCode}}</th>
-                        <th class="text-black bg-white" scope="col">{{entry.accountName}}</th>
-                        <th class="text-black bg-white" scope="col">{{entry.tType}}</th>
-                        <th class="text-black bg-white" scope="col">{{entry.date}}</th>
-                        <th class="text-black bg-white" scope="col">{{entry.amount}}</th>
-                        <th class="text-black bg-white" scope="col">{{entry.remark}}</th>
-                        <th class="text-black bg-white" scope="col">{{entry.username}}</th>
-                        <th onclick="dataImporter(this)" class="text-danger bg-white" scope="col">Edit </th>
+                    <tr class="">
+                        <th class="td-border bg-secondary text-white" scope="col">{{entry.id}}</th>
+                        <th class="td-border bg-secondary text-white" scope="col">{{entry.accountCode}}</th>
+                        <th class="td-border bg-secondary text-white" scope="col">{{entry.accountName}}</th>
+                        <th class="td-border bg-secondary text-white" scope="col">{{entry.tType}}</th>
+                        <th class="td-border bg-secondary text-white" scope="col">{{entry.date}}</th>
+                        <th class="td-border bg-secondary text-white" scope="col">{{entry.amount}}</th>
+                        <th class="td-border bg-secondary text-white" scope="col">{{entry.remark}}</th>
+                        <th class="td-border bg-secondary text-white" scope="col">{{entry.username}}</th>
+                        <th onclick="dataImporter(this)" class="text-danger td-border bg-secondary" scope="col">Edit </th>
                     </tr>
                     {%endfor%}
                 </tbody>

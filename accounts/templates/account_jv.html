@@ -250,15 +250,15 @@
             <tbody>
                {% for entry in entries %}
                <tr class="table-border-none">
-                  <th class="text-black bg-white" scope="col">{{entry.id}}</th>
-                  <th class="text-black bg-white" scope="col">{{entry.accountCode}}</th>
-                  <th class="text-black bg-white" scope="col">{{entry.accountName}}</th>
-                  <th class="text-black bg-white" scope="col">{{entry.tType}}</th>
-                  <th class="text-black bg-white" scope="col">{{entry.date}}</th>
-                  <th class="text-black bg-white" scope="col">{{entry.amount}}</th>
-                  <th class="text-black bg-white" scope="col">{{entry.remark}}</th>
-                  <th class="text-black bg-white" scope="col">{{entry.username}}</th>
-                  <th onclick="dataImporter(this)" class="text-danger bg-white" scope="col">Edit </th>
+                  <th class="td-border bg-secondary text-white" scope="col">{{entry.id}}</th>
+                  <th class="td-border bg-secondary text-white" scope="col">{{entry.accountCode}}</th>
+                  <th class="td-border bg-secondary text-white" scope="col">{{entry.accountName}}</th>
+                  <th class="td-border bg-secondary text-white" scope="col">{{entry.tType}}</th>
+                  <th class="td-border bg-secondary text-white" scope="col">{{entry.date}}</th>
+                  <th class="td-border bg-secondary text-white" scope="col">{{entry.amount}}</th>
+                  <th class="td-border bg-secondary text-white" scope="col">{{entry.remark}}</th>
+                  <th class="td-border bg-secondary text-white" scope="col">{{entry.username}}</th>
+                  <th onclick="dataImporter(this)" class="text-danger td-border bg-secondary" scope="col">Edit </th>
                </tr>
                {%endfor%}
             </tbody>

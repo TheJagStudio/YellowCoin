@@ -16,6 +16,5 @@ urlpatterns = [
     path('portfolio/', views.trading_portfolio, name='trading_portfolio'),
     path('ban/', views.trading_ban, name='trading_ban'),
     path('margin/', views.trading_margin, name='trading_margin'),
-    path('gen/', views.access_gen, name='access_gen'),
     path('scriptChanger/', views.scriptChanger, name='scriptChanger'),
 ]

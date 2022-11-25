@@ -37,17 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'channels',
-    'django_celery_results',
-    'django_celery_beat',
     'trading',
     'dashboard',
     'user',
     'log',
     'report',
-    'forex',
     'application',
-    'accounts'
+    'accounts',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -79,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'yellowcoin.wsgi.application'
+#WSGI_APPLICATION = 'yellowcoin.wsgi.application'
 ASGI_APPLICATION = 'yellowcoin.asgi.application'
 
 

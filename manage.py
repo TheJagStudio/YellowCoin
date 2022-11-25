@@ -17,6 +17,6 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-#hello moto
+
 if __name__ == '__main__':
     main()

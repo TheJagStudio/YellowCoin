@@ -7,5 +7,4 @@ urlpatterns = [
     path('trades/', views.forex_trades, name='forex_trades'),
     path('portfolio/', views.forex_portfolio, name='forex_portfolio'),
     path('margin/', views.forex_margin, name='forex_margin'),
-    path('data/', views.forex_data, name='forex_data'),
 ]
