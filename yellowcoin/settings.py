@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-#WSGI_APPLICATION = 'yellowcoin.wsgi.application'
+WSGI_APPLICATION = 'yellowcoin.wsgi.application'
 ASGI_APPLICATION = 'yellowcoin.asgi.application'
 
 
