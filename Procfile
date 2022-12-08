@@ -1,1 +1,1 @@
-web: gunicorn yellowcoin.asgi
+web: gunicorn yellowcoin.wsgi

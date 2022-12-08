@@ -195,20 +195,7 @@ def ApiF(market, token):
     names = []
     symbols = []
     for id in ids:
-        if market == "NSE":
-            for row in NSE:
-                if row[2] == id:
-                    names.append(row[10])
-                    symbols.append(row[16])
-                    rows.append({
-                        "Exch": row[0],
-                        "ExchType": row[1],
-                        "Symbol": row[3],
-                        "Expiry": row[5],
-                        "StrikePrice": "0",
-                        "OptionType": ""
-                    })
-                    break
+
         if market == "MCX":
             for row in MCX:
                 if row[2] == id:
@@ -216,20 +203,6 @@ def ApiF(market, token):
                     symbols.append(row[16])
                     rows.append({
                         "Exch": "M",
-                        "ExchType": row[1],
-                        "Symbol": row[3],
-                        "Expiry": row[5],
-                        "StrikePrice": row[7],
-                        "OptionType": ""
-                    })
-                    break
-        if market == "NFO":
-            for row in NFO:
-                if row[2] == id:
-                    names.append(row[3])
-                    symbols.append(row[16])
-                    rows.append({
-                        "Exch": row[0],
                         "ExchType": row[1],
                         "Symbol": row[3],
                         "Expiry": row[5],
@@ -251,6 +224,34 @@ def ApiF(market, token):
                         "OptionType": ""
                     })
                     break
+        if market == "NFO":
+            for row in NFO:
+                if row[2] == id:
+                    names.append(row[3])
+                    symbols.append(row[16])
+                    rows.append({
+                        "Exch": row[0],
+                        "ExchType": row[1],
+                        "Symbol": row[3],
+                        "Expiry": row[5],
+                        "StrikePrice": row[7],
+                        "OptionType": ""
+                    })
+                    break
+        if market == "NSE":
+            for row in NSE:
+                if row[2] == id:
+                    names.append(row[10])
+                    symbols.append(row[16])
+                    rows.append({
+                        "Exch": row[0],
+                        "ExchType": row[1],
+                        "Symbol": row[3],
+                        "Expiry": row[5],
+                        "StrikePrice": "0",
+                        "OptionType": ""
+                    })
+                    break
     req_list = rows
     lastmsg = dataFeed(req_list)
     live_data = lastmsg['body']['Data']
@@ -265,47 +266,47 @@ def ApiF(market, token):
         try:
             sName = names[i]
         except:
-            sName = "-"
+            sName = ""
         try:
             sOpen = live_data[i]['Open']
         except:
-            sOpen = "-"
+            sOpen = ""
         try:
             sHigh = live_data[i]['High']
         except:
-            sHigh = "-"
+            sHigh = ""
         try:
             sLow = live_data[i]['Low']
         except:
-            sLow = "-"
+            sLow = ""
         try:
             sClose = live_data[i]['PClose']
         except:
-            sClose = "-"
+            sClose = ""
         try:
             sLTP = live_data[i]['LastRate']
         except:
-            sLTP = "-"
+            sLTP = ""
         try:
             sVolume = live_data[i]['TotalQty']
         except:
-            sVolume = "-"
+            sVolume = ""
         try:
             sChange = live_data[i]['Chg']
         except:
-            sChange = "-"
+            sChange = ""
         try:
             sPerChange = live_data[i]['ChgPcnt']
         except:
-            sPerChange = "-"
+            sPerChange = ""
         try:
             sSell = askBid[0]  # live_data[i]["BidRate"]
         except:
-            sSell = "-"
+            sSell = ""
         try:
             sAsk = askBid[1]  # live_data[i]["AskRate"]
         except:
-            sAsk = "-"
+            sAsk = ""
         temp.append([sName, sOpen, sHigh, sLow, sClose,
                     sLTP, sVolume, str(sChange) + " / " + str(round(sPerChange, 2)), sSell, sAsk])
     return temp
@@ -353,39 +354,51 @@ def watchlist(request):
                     if share[2] == stock:
                         request.session['token_to_instrument_NSE'].append(
                             share[2])
+                        request.session['TempNSE'].append(
+                            [share[10], "-", "-", "-", "-", "-", "-", "-/-", "-", "-"])
                 for share in MCX:
                     if share[2] == stock:
                         request.session['token_to_instrument_MCX'].append(
                             share[2])
+                        request.session['TempMCX'].append(
+                            [share[3], "-", "-", "-", "-", "-", "-", "-/-", "-", "-"])
                 for share in NFO:
                     if share[2] == stock:
                         request.session['token_to_instrument_NFO'].append(
                             share[2])
+                        request.session['TempNFO'].append(
+                            [share[3], "-", "-", "-", "-", "-", "-", "-/-", "-", "-"])
                 for share in Forex:
                     if share[2] == stock:
                         request.session['token_to_instrument_Forex'].append(
                             share[2])
-            try:
-                request.session['TempNSE'] = ApiF(
-                    "NSE", request.session['token_to_instrument_NSE'])
-            except:
-                request.session['TempNSE'] = []
-            try:
-                request.session['TempMCX'] = ApiF(
-                    "MCX", request.session['token_to_instrument_MCX'])
-            except:
-                request.session['TempMCX'] = []
-            try:
-                request.session['TempNFO'] = ApiF(
-                    "NFO", request.session['token_to_instrument_NFO'])
-            except:
-                request.session['TempNFO'] = []
-            try:
-                request.session['TempForex'] = ApiF(
-                    "Forex", request.session['token_to_instrument_Forex'])
-            except:
-                request.session['TempForex'] = []
+                        request.session['TempForex'].append(
+                            [share[3], "-", "-", "-", "-", "-", "-", "-/-", "-", "-"])
+            # try:
+            #    request.session['TempNSE'] = ApiF(
+            #        "NSE", request.session['token_to_instrument_NSE'])
+            # except:
+            #    request.session['TempNSE'] = []
+            # try:
+            #    request.session['TempMCX'] = ApiF(
+            #        "MCX", request.session['token_to_instrument_MCX'])
+            # except:
+            #    request.session['TempMCX'] = []
+            # try:
+            #    request.session['TempNFO'] = ApiF(
+            #        "NFO", request.session['token_to_instrument_NFO'])
+            # except:
+            #    request.session['TempNFO'] = []
+            # try:
+            #    request.session['TempForex'] = ApiF(
+            #        "Forex", request.session['token_to_instrument_Forex'])
+            # except:
+            #    request.session['TempForex'] = []
 
+            #request.session['TempNSE'] = []
+            #request.session['TempMCX'] = []
+            #request.session['TempNFO'] = []
+            #request.session['TempForex'] = []
             request.session['TempNSE'].sort(key=lambda x: x[1])
             request.session['TempMCX'].sort(key=lambda x: x[1])
             request.session['TempNFO'].sort(key=lambda x: x[1])
